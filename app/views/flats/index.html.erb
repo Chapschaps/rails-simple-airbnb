@@ -1,0 +1,19 @@
+<div class="navbar">
+  <h3>Simple Airnbn</h3>
+
+</div>
+
+
+<h1>All our flats</h1>
+<%= "All " + "#{@flats.count}" + " flats" %>
+
+<% @flats.each do |flat| %>
+<div class="border border-success rounded w-50 p-3 ml-10">
+  <h1><%= flat.name %></h1>
+  <p><%= flat.address %></p>
+  <span><%= flat.number_of_guests %></span>
+  <span>persons</span>
+  <span><%= flat.price_per_night %></span>
+  <span> € per night</span>
+</div>
+<% end %>
